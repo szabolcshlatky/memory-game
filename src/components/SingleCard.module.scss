@@ -1,0 +1,35 @@
+@use '../styles/globals' as *;
+
+.card {
+  position: relative;
+
+  img {
+    display: block;
+    width: 100%;
+    border: 2px solid $text-color;
+    border-radius: 6px;
+  }
+
+  .front {
+    position: absolute;
+    transform: rotateY(90deg);
+    transition: all ease-in 0.2s;
+  }
+
+  .back {
+    transition: all ease-in 0.2s;
+    transition-delay: 0.2s;
+  }
+}
+
+.flipped {
+  .front {
+    transform: rotateY(0deg);
+    transition-delay: 0.2s;
+  }
+
+  .back {
+    transform: rotateY(90deg);
+    transition-delay: 0s;
+  }
+}
